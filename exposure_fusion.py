@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import os
 from PIL import Image
 import os
-
+os.environ["QT_QPA_PLATFORM"] = "offscreen"
 from PIL.ImageOps import scale
 
 'Normal fusion equation'
@@ -485,7 +485,7 @@ def main():
         fig.savefig(f"{output_dir}/person.png", bbox_inches="tight", pad_inches=0, dpi=400)
     elif intro == 12:
         fig.savefig(f"{output_dir}/lighthouse.png", bbox_inches="tight", pad_inches=0, dpi=400)
-    plt.show()
+    plt.close()
 
 
 main()
